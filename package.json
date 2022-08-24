@@ -4,15 +4,20 @@
   "description": "",
   "main": "index.js",
   "type": "module",
+  "preferGlobal": true,
   "scripts": {
     "start": "node index.js",
     "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "bin": {
+    "pcs": "index.js"
   },
   "keywords": [],
   "author": "",
   "license": "MIT",
   "dependencies": {
     "cheerio": "^1.0.0-rc.12",
-    "node-fetch": "^3.2.10"
+    "node-fetch": "^3.2.10",
+    "yargs": "^17.5.1"
   }
 }

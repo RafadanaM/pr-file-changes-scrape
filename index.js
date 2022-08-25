@@ -10,7 +10,7 @@ try {
     .usage("Usage: -u <url>")
     .option("u", {alias: "u", describe: "Gihub pull request URL", type: "string", demandOption: true})
     .argv;
-    const response = await fetch(`${options.$0}/files`);
+    const response = await fetch(`${options.u}/files`);
     const body = await response.text();
     const $ = cheerio.load(body);
     const fileNamesChanged = $('li.ActionList-item.js-tree-node > span').toArray().map((el) =>`- ${$(el).text()}` );
